@@ -11,6 +11,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
+            overflow: hidden;
         }
         .felezo{
             margin-top: 350px;
@@ -27,7 +28,7 @@
     </style>
 </head>
 <body onkeydown="test(event)">
-    <div id="ide" class="d-flex justify-content-center text-center felezo">
+    <div id="ide" class="row d-flex justify-content-center text-center felezo">
         
     </div>
 
@@ -48,7 +49,7 @@
             ide.innerHTML = "";
             data.forEach((obj)=>{
                 ide.innerHTML += `
-                <div class="col-md-1 m-2 korvonal">
+                <div class="col-md-1 col-sm-3 m-2 korvonal">
                     <audio id="${obj.key}" src="${obj.url}"></audio>
                     <h2><b>${obj.letter}</b></h2>
                     <p><b>${obj.sound}</b></p>
